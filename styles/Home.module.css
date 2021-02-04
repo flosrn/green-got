@@ -1,0 +1,117 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.links a, .header a, .footer a {
+  color: #0070f3;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.header a {
+  font-size: 1.5rem;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.logo {
+  height: 1em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+
+}
+
+.form input {
+  height: 2rem;
+  margin: 0.3rem;
+  width: 100%;
+
+}
+
+.form button {
+  margin-top: 1rem;
+  align-items: center;
+  background: #00E3AE;
+  border: 2px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 6px 10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: 1;
+  width: 100%;
+}
+
+.msgSuccess {
+  color: #00E3AE;
+}
+
+.msgError {
+  color: orangered;
+}

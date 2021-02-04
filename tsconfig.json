@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./*"],
+      "components/*": ["./components/*"],
+      "lib/*": ["./lib/*"],
+      "interfaces/*": ["./interfaces/*"],
+      "hooks/*": ["./hooks/*"],
+      "services/*": ["./services/*"],
+      "context/*": ["./context/*"],
+      "public/*": ["./public/*"],
+      "utils/*": ["./utils/*"],
+      "i18n/*": ["./i18n/*"],
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
