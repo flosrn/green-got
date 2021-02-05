@@ -1,7 +1,8 @@
 import React from "react";
 import { GetStaticProps } from "next";
 import axios from "axios";
-import LayoutPage from "components/layout-page";
+import { BASE_URL } from "../utils/index";
+import LayoutPage from "../components/layout-page";
 
 import styles from "../styles/Home.module.css";
 
@@ -15,10 +16,14 @@ interface Props {
 const HomePage: React.FC<Props> = ({ user }: Props) => {
   return (
     <LayoutPage title="Home">
-      <h1 className={styles.title}>Hello 👋</h1>
-      <h1>
-        My name is {user?.first_name} {user?.last_name} !
+      <h1 title="title" className={styles.title}>
+        Hello 👋
       </h1>
+      {user && (
+        <h1 title="greetings">
+          My name is {user.first_name} {user.last_name}!
+        </h1>
+      )}
 
       <h3>I'm a fullstack french developer 🇫🇷</h3>
 
@@ -50,7 +55,7 @@ const HomePage: React.FC<Props> = ({ user }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await axios.get("http://localhost:3000/api/greetings");
+  const { data } = await axios.get(`${BASE_URL}/api/greetings`);
   return {
     props: { user: data },
   };

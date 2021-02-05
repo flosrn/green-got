@@ -2,10 +2,10 @@ import React, { useState, useReducer } from "react";
 import {
   initialState,
   createUserReducer,
-  submitHandler,
+  createUser,
   IUserData,
-} from "lib/api";
-import LayoutPage from "components/layout-page";
+} from "../lib/api";
+import LayoutPage from "../components/layout-page";
 
 import styles from "../styles/Home.module.css";
 
@@ -34,9 +34,10 @@ const CreateUserPage: React.FC = () => {
       <form
         onSubmit={(event: React.FormEvent<HTMLFormElement>) => {
           event.preventDefault();
-          submitHandler(dispatch, userData);
+          createUser(dispatch, userData);
         }}
         className={styles.form}
+        title="form"
       >
         <input
           name="firstName"
@@ -58,6 +59,7 @@ const CreateUserPage: React.FC = () => {
           type="submit"
           disabled={isLoading}
           className={styles.submitButton}
+          data-testid="submit"
         >
           Create user
         </button>
@@ -67,7 +69,11 @@ const CreateUserPage: React.FC = () => {
         <div>Loading...</div>
       ) : (
         <div>
-          {isSuccess && <p className={styles.msgSuccess}>{message}</p>}
+          {isSuccess && (
+            <p role="success" className={styles.msgSuccess}>
+              {message}
+            </p>
+          )}
           {hasError && (
             <p role="alert" className={styles.msgError}>
               {message}

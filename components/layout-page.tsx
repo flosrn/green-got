@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-import styles from "styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 
 interface Props {
   title: string;
